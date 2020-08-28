@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace : mapper와 mapper을 구분짓는 이름 -->
+<mapper namespace="members">
+	<select id="list" resultType="com.ict.db.VO">
+		select * from members order by idx
+	</select>
+	<select id="idchk" parameterType="String" resultType="com.ict.db.VO">
+		select * from members where m_id = #{m_id}
+	</select>
+	<insert id="insert" parameterType="com.ict.db.VO">
+		insert into members values(members_seq.nextval,#{m_id},#{m_pw},#{m_name},#{m_age},sysdate)
+	</insert>
+	<delete id="delete" parameterType="String">
+		delete from members where idx = #{idx}
+	</delete>
+</mapper>

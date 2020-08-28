@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 5 elements to &apos;0810_Ajax_MVC02/src/com.ict.db&apos;&#x0D;&#x0A;- Original project: &apos;0721_MVC_MyBatis_guestbook&apos;&#x0D;&#x0A;- Destination element: &apos;0810_Ajax_MVC02/src/com.ict.db&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.ict.db.DAO.java&#x0D;&#x0A;     com.ict.db.DBService.java&#x0D;&#x0A;     com.ict.db.VO.java&#x0D;&#x0A;     mapper.xml&#x0D;&#x0A;     config.xml" description="Copy elements" destination="=0810_Ajax_MVC02/src&lt;com.ict.db" element1="src/com/ict/db/mapper.xml" element2="src/com/ict/db/config.xml" element3="/src&lt;com.ict.db{DAO.java" element4="/src&lt;com.ict.db{DBService.java" element5="/src&lt;com.ict.db{VO.java" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1597020456938" units="3" version="1.0"/>
+</session>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xml : 확장 마크업 언어
+	 태그를 사용자가 만들어서 사용
+	 dtd를 적용하면 dtd에 적용된 태그를 사용한다.
+	 DTD는 XML 문서의 구조 및 해당 문서에서 사용할 수 있는 적법한 요소와 속성을 정의합니다.
+	 루트태그(요소)가 존재한다.
+ -->
+ <products>
+ <product>
+ <name>딸기우유</name>
+ <price>950</price>
+ </product>
+ <product>
+ <name>음료수</name>
+ <price>1300</price>
+ </product>
+ <product>
+ <name>커피</name>
+ <price>2900</price>
+ </product>
+ <product>
+ <name>탄산수</name>
+ <price>1700</price>
+ </product>
+ </products>

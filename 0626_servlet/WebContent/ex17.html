@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function send_go() {
+		// 자바스크립트에서 다른 페이지로 이동
+		location.href="/0626_servlet/Ex17_3";
+	}
+</script>
+</head>
+<body>
+	<form action="/0626_servlet/Ex17_1" method="post">
+		<input type="submit" value="오늘날짜구하기" >
+	</form>
+	<form action="/0626_servlet/Ex17_2" method="post">
+		<input type="submit" value="운수구하기">
+	</form>
+	<!-- 버튼을 클릭하면 자바스크립트 함수 호출 -->
+	<button onclick="send_go()">IP 구하기</button>
+</body>
+</html>

@@ -1,0 +1,23 @@
+1. jQuery.load(url, data, callback)
+    - html 파일 로드 하고 DOM 방식으로 삽입
+    - url: 서버측위치, data: 가져올 데이터, callback ; 콜백함수
+    
+  2. jQuery.get(url, data, callback, type)  : get방식의 원격 페이지  로드 
+     jQuery.post(url, data, callback, type) : post방식으로 원결 페이지 로드
+     
+  3. jQuery.getJSON()   : json 데이터 로드
+     jQuery.getScript() : script 데이터  로드
+  
+  4. serialize() : form 요소에 전송할 데이터를 재가공(직렬화)           
+                                      서버에 form 요소들을 직렬화 해서 보낼때 사용
+                                        
+  5. ajaxComplete(function(){}) : ajax 통신이 완료 (성공)되면 함수를 실행하라.
+  
+  6. jQuery.ajax(url, method, data, datatype, success, error)
+    - url : 서버위치
+    - method : get,post 방식
+    - data : 요청(보내는 것)에 전달되는 파라미터
+    - dataType : 응답결과(받는것)의 데이터 형태 (xml, html, json, text, script..)
+    - success : 성공했을 때 
+    - error : 실패 했을 때
+      

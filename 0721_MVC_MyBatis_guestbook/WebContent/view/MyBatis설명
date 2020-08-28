@@ -1,0 +1,32 @@
+1. MyBatis 다운로드 한다.
+2. 압축해제 후 jar 파일을 web-inf/lib에 넣어준다.
+3. 자바영역에 3개의 클래스 파일 , 2개의 xml 파일로 구성한다.
+	- VO, DAO, DBService, config.xml, mapper.xml
+	- VO(ValueObject) : 객체 정보(DB컬럼, 파라미터값)를 담는 객체
+	- DAO(DataAccessObject) : DB를 사용하여 데이터를 조회하거나,
+							    조작하는 기능을 전담하는 객체
+	- DBService : config.xml 파일을 읽어서 MyBatis를 사용할 수 있도록
+				    환경설정을 해줌
+	- config.xml : 오라클에 접근할 수 있도록하는 환경설정과
+				      실제 DB처리해서 결과를 얻어내는 mapper.xml의 
+				      위치를 지정해주는 환경설정
+	- mapper.xml : 실제 DB처리하는 SQL 구문을 사용해서 결과를 얻어내는 곳
+		** id속성 			: 호출하는 이름을 말함.
+		** parameterType속성 	: #{}에 삽입되는 정보의 자료형을 말함.
+		** resultType속성		: 실행결과의 자료형을 말함.
+			select문에서 결과가 하나 	=> VO(mapper)	=> DAO 에서는 VO
+					     결과가 여러개 	=> VO(mapper)	=> DAO 에서는 list<VO>
+
+	<select id="" paratmeterType="" resultType="">
+		실제 사용하는 쿼리 작성(? 대신 #{} 사용)
+	</select>
+	<insert id="" paratmeterType="">
+		실제 사용하는 쿼리 작성(? 대신 #{} 사용)
+	</insert>
+	<upeate id="" paratmeterType="">
+		실제 사용하는 쿼리 작성(? 대신 #{} 사용)
+	</update>
+	<delete id="" paratmeterType="">
+		실제 사용하는 쿼리 작성(? 대신 #{} 사용)
+	</delete>
+	

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/0626_servlet/Ex10" method="post">
+		<fieldset>
+			<legend> 배열 파라미터 넘기기</legend>
+			<p>취미 : <input type="checkbox" name="hobby" value="운동">운동
+					<input type="checkbox" name="hobby" value="게임">게임
+					<input type="checkbox" name="hobby" value="영화보기">영화
+					<input type="checkbox" name="hobby" value="독서">독서
+			</p>
+			<p>사용하고 있는 프로그램 : 
+				<select name="program" multiple size="6">
+					<option>java</option>
+					<option>html</option>
+					<option>servlet</option>
+					<option>jsp</option>
+					<option>spring</option>
+					<option>android</option>
+				</select>
+			</p>
+			<p><input type="submit" value="보내기"></p>
+		</fieldset>
+	</form>
+</body>
+</html>

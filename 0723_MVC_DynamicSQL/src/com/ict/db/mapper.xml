@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace : mapper와 mapper을 구분짓는 이름 -->
+<mapper namespace="employees">
+	<!-- id는 DAO에서 해당 태그를 호출하는 이름이다. -->
+	<select id="list" resultType="com.ict.db.VO">
+		select * from employees order by employee_id
+	</select>
+	<select id="d_list" parameterType="String" resultType="com.ict.db.VO">
+		select * from employees where department_id = #{dept_id} order by employee_id
+	</select>
+	<select id="dy_list" parameterType="Map" resultType="com.ict.db.VO">
+	select * from employees
+	<choose>
+		<when test="idx==1"> where employee_id = #{keyword}</when>
+		<when test="idx==2"> where lower(first_name) like '%'||#{keyword}||'%'</when>
+		<when test="idx==3"> where lower(job_id) like '%'||#{keyword}||'%'</when>
+		<when test="idx==4"> where department_id = #{keyword}</when>
+	</choose>
+	</select>
+</mapper>
