@@ -58,33 +58,32 @@ table, th, td {
 							<td style="padding: 10px;">${k.p_num}</td>
 							<td style="width: 20px;">${k.p_name}</td>
 							<td>정가 : ${k.p_price} &nbsp;&nbsp;
-<%-- 							    <font color="red">(세일가격 : ${k.p_saleprice })</font> --%>
+							  <%--   <font color="red">(세일가격 : ${k.p_saleprice })</font> --%>
 							</td>
 							<td>
-								<form method="post" action="/MyController?cmd=editcount" >
-									<input type="number" name="p_su" value="${k.p_su}" style="width: 40px;">
-									<input type="hidden" name="id" value="${k.id}" >
-									<input type="hidden" name="p_num" value="${k.p_num}">
-									<input type="submit" value="수정">
+								<form method="post" action="/MyController?cmd=editcount">
+									<input type="number" name="p_su" value="${k.p_su}" size="1">
+									<input type="hidden" name="p_num" value="${k.p_num}">								
+									<input type="hidden" name="id" value="${k.id}">	
+									<input type="submit" value="수정">							
 								</form>
-							
 							</td>
 							<td>
-								<c:set var="total" value="${k.p_price * k.p_su}"/>
-								${total}
+								${k.p_price * k.p_su }
 							</td>
 							<td>
-								<button onclick="location.href='/MyController?cmd=delproduct&p_num=${k.p_num}&id=${k.id}'">삭제 </button>
+								<button onclick="location.href='/MyController?cmd=delproduct&p_num=${k.p_num}&id=${k.id}'"> 삭제 </button>
 							</td>
-						</tr>		
-						<c:set var="cartTotal" value="${cartTotal=cartTotal+total}"></c:set>				
+						</tr>	
+						<c:set var="cartTotal" value="${cartTotal = cartTotal+(k.p_price * k.p_su)}" ></c:set>					
 					</c:forEach>
 				</c:otherwise>
 			</c:choose>	
 		</tbody>
 		<tfoot>
 			<tr>
-				<td colspan="6" align="right" style="padding: 10px 50px">총 결재액 :${cartTotal}</td>
+				
+				<td colspan="6" align="right" style="padding: 10px 50px">총 결재액 : ${cartTotal} </td>
 			</tr>
 		</tfoot>
 	</table>

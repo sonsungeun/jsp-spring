@@ -29,10 +29,10 @@ C:\study\jspstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\11969006
 \0702_jsp\src
 C:\study\jspstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2370833220.index
 \0810_Ajax_MVC02\src
-C:\study\jspstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2567153976.index
-\0813_kakao_map\src
 C:\study\jspstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1403457885.index
 \0810_Ajax_MVC02\src
+C:\study\jspstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2567153976.index
+\0813_kakao_map\src
 C:\study\jspstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2363038478.index
 \0723_MVC_DynamicSQL\src
 C:\study\jspstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3969324109.index
@@ -73,3 +73,5 @@ C:\study\jspstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\25911520
 \0710_JDBC\src
 C:\study\jspstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\843913239.index
 \0716_MVC01\src
+C:\study\jspstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2765137989.index
+\androidserver\src

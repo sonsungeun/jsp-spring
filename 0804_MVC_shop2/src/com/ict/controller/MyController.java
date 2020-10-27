@@ -16,7 +16,7 @@ import com.ict.model.ContentCommand;
 import com.ict.model.DelProductCommand;
 import com.ict.model.EditCountCommand;
 import com.ict.model.LogInCommand;
-import com.ict.model.LogInOkCommand;
+import com.ict.model.LogInOKCommand;
 import com.ict.model.LogOutCommand;
 import com.ict.model.ShopCommand;
 import com.ict.model.ViewCartCommand;
@@ -24,7 +24,7 @@ import com.ict.model.ViewCartCommand;
 @WebServlet("/MyController")
 public class MyController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
 	}
@@ -37,19 +37,18 @@ public class MyController extends HttpServlet {
 		String cmd = request.getParameter("cmd");
 		Command comm = null;
 		switch (cmd) {
-		case "list":comm=new ShopCommand();	break;
-		case "content":comm=new ContentCommand();	break;
-		case "login":comm=new LogInCommand();	break;
-		case "loginok":comm=new LogInOkCommand();	break;
-		case "admin":comm=new AdminCommand();	break;
-		case "logout":comm=new LogOutCommand();	break;
-		case "addcart":comm=new AddCartCommand();	break;
-		case "viewcart":comm=new ViewCartCommand();	break;
-		case "editcount":comm=new EditCountCommand();	break;
-		case "delproduct":comm=new DelProductCommand();	break;
+		case "list": comm = new ShopCommand(); break;
+		case "content": comm = new ContentCommand(); break;
+		case "login": comm = new LogInCommand(); break;
+		case "loginok": comm = new LogInOKCommand(); break;
+		case "logout" : comm = new LogOutCommand(); break;
+		case "admin" : comm = new AdminCommand(); break;
+		case "addcart" : comm = new AddCartCommand(); break;
+		case "viewcart" : comm = new ViewCartCommand(); break;
+		case "editcount" : comm = new EditCountCommand(); break;
+		case "delproduct" : comm = new DelProductCommand(); break;
 		}
 		String path = comm.exec(request, response);
 		request.getRequestDispatcher(path).forward(request, response);
 	}
-
 }

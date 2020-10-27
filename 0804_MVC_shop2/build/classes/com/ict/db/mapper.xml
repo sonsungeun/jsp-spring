@@ -15,23 +15,27 @@
 	<insert id="add" parameterType="com.ict.db.VO">
 		insert into shop_t values(shop_seq.nextval, #{category}, #{p_num},#{p_name},#{p_company},#{p_price},#{p_saleprice},#{p_image_s},#{p_image_l},#{p_content},sysdate)
 	</insert>
-	<select id="cartlist" parameterType="map" resultType="com.ict.db.CVO">
-		select * from cart where id = #{id} and p_num = #{p_num}
+	
+	<select id="cartlist" parameterType="Map" resultType="com.ict.db.CVO">
+		select * from cart where id=#{id} and p_num=#{p_num}
 	</select>
-	<insert id="cartinsert" parameterType="com.ict.db.CVO">
-		insert into cart values(cart_seq.nextval,#{p_num},#{p_name},#{p_price},1,#{id})
+	
+	<insert id="cartInsert" parameterType="com.ict.db.CVO">
+		insert into cart values(cart_seq.nextval, #{p_num}, #{p_name},#{p_price},1,#{id})
 	</insert>
-	<update id="cartupdate" parameterType="com.ict.db.CVO">
-		update cart set p_su = p_su+1 where id = #{id} and p_num = #{p_num}
+	
+	<update id="cartUpdate" parameterType="com.ict.db.CVO">
+		update cart set p_su = p_su + 1  where id=#{id} and p_num=#{p_num} 
 	</update>
-	<select id="allcartlist" parameterType="String" resultType="com.ict.db.CVO">
+	
+	<select id="cartall" parameterType="String" resultType="com.ict.db.CVO">
 		select * from cart where id = #{id}
 	</select>
 	<update id="cartup" parameterType="com.ict.db.CVO">
-		update cart set p_su = #{p_su} where id=#{id} and p_num=#{p_num}
+		update cart set p_su=#{p_su} where id=#{id} and p_num=#{p_num}
 	</update>
-	<delete id="cartdel" parameterType="com.ict.db.CVO">
-		delete from cart where p_num=#{p_num} and id=#{id}
+	<delete id="cartDel" parameterType="com.ict.db.CVO">
+		delete from cart where id=#{id} and p_num=#{p_num}
 	</delete>
 </mapper>
 

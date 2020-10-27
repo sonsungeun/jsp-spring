@@ -41,35 +41,39 @@ public class DAO {
 		ss.commit();
 		return result;
 	}
-	
-	// id와 제품번호를 이용해서 카트리스트를 구하자
+	// id와 제품번호를 이용해서 카트 리스트를 구하자 
 	public static CVO getCartList(String id, String p_num) {
 		CVO cvo = null;
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("id", id);
 		map.put("p_num", p_num);
-		cvo = getSession().selectOne("cartlist", map);
-		return cvo;
+		
+		cvo = getSession().selectOne("cartlist",map);
+		return cvo;	
 	}
+	
 	public static void getCartInsert(CVO c_vo) {
-		getSession().insert("cartinsert", c_vo);
+		getSession().insert("cartInsert", c_vo);
 		ss.commit();
 	}
+	
 	public static void getCartUpdate(CVO cvo) {
-		getSession().update("cartupdate", cvo);
+		getSession().update("cartUpdate", cvo);
 		ss.commit();
 	}
+	
 	public static List<CVO> getAllCartList(String id){
-		List<CVO> clist= null;
-		clist = getSession().selectList("allcartlist", id);
-		return clist;		
+		List<CVO> clist = null;
+		clist = getSession().selectList("cartall", id);
+		return clist;
 	}
+	
 	public static void getCartCountUpdate(CVO cvo) {
-		getSession().update("cartup", cvo);
+		getSession().update("cartup",cvo);
 		ss.commit();
 	}
-	public static void getCartDel(CVO cvo) {
-		getSession().delete("cartdel", cvo);
+	public static void getcartDel(CVO cvo) {
+		getSession().delete("cartDel", cvo);
 		ss.commit();
 	}
 }
